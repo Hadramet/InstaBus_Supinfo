@@ -1,16 +1,17 @@
 package com.supinfoa3andm.instabus.models
+import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
+@JsonClass(generateAdapter = true)
 data class Nearstation (
     val id: String,
-    val name: String? = null,
     val lat: String,
     val lon: String,
-    val nearbyStations: String? = null,
     val distance: String,
-    val streetName: String? = null,
+    @Json(name = "street_name")val streetName: String? = null,
     val city: String? = null,
-    val utmX: String? = null,
-    val utmY: String? = null,
+    @Json(name = "utm_x")val utmX: String? = null,
+    @Json(name = "utm_y")val utmY: String? = null,
     val furniture: String? = null,
     val buses: String? = null
 )

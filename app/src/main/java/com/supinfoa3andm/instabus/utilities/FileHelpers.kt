@@ -12,5 +12,13 @@ class FileHelpers {
                 }
             }
         }
+        fun getFileFromAssets (context: Context, asset: String) : String
+        {
+            return context.assets.open(asset).use {
+                it.bufferedReader().use {
+                    it.readText()
+                }
+            }
+        }
     }
 }
