@@ -30,11 +30,9 @@ class MainFragment : Fragment() {
 
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
         viewModel.stations.observe(this, Observer{
-
             for (station in it)
-                station.streetName?.let {
-                    stations.append(station.streetName + "\n")
-                    //Log.i(LOG_INSTABUS, station.streetName)
+                station.street_name?.let {
+                    stations.append(station.street_name + "\n")
                 }
             message.text = stations
         })

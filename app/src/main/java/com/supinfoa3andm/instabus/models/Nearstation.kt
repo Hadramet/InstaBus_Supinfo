@@ -8,10 +8,10 @@ data class Nearstation (
     val lat: String,
     val lon: String,
     val distance: String,
-    @Json(name = "street_name")val streetName: String? = null,
+    val street_name: String? = null,
     val city: String? = null,
-    @Json(name = "utm_x")val utmX: String? = null,
-    @Json(name = "utm_y")val utmY: String? = null,
+    val utm_x: String? = null,
+    val utm_y: String? = null,
     val furniture: String? = null,
     val buses: String? = null
 )
